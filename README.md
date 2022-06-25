@@ -1,3 +1,5 @@
+# Qewam Fronted developer job Test project
+
 ## Description:
 - We have a widget that shows in first section 7 days with dates  and must to be always dynamic starting from today.
 - The days that have a Startup sessions will be active and clickable as a design and disabled and not allowed to click.
@@ -47,6 +49,7 @@
 - You can use this settings for deploying in netlify.com
 
 ￼![](/static/settings.png)
-Give us you app link .. 
+
+Give us your app link .. 
 
 
