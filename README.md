@@ -53,3 +53,14 @@
 Give us your app link .. 
 
 
+# How we will test your project ?
+
+- Quality Code.
+- no bugs.
+- Fully functionality.
+- Your speed work.
+- Using components.
+- Unit test.
+- Commits for Git.
+- Layout and design Acceptance criteria.
+- Bonus addressed points.
