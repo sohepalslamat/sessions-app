@@ -16,9 +16,9 @@
 - Verify writing a clean and a readable code.
 - Verify when press Lang switcher to show exact selected langue for layout direction and content.
 - Verify using css variables for colors from tailwind.css ( don’t use static code for colors)
-- Since we’re using TailwindCss you can use Jit mode for specific sizes.
+- Since we’re using TailwindCss you can use Jit mode for specific sizes like text-[20px].
 - Show the hover states for mouse as a design.
-- You can extend more sessions for json and show more conditions. || Bouns 
+- You can extend more sessions for json and show more conditions. || Bonus 
 - You have to Call to action buttons the first will send user to _blank page with url 
 - The second will show a message in console log or an alert that the session canceled and remove this session with out refresh. 
 
@@ -40,24 +40,24 @@ https://www.figma.com/file/P4WoRMOeI8xW4IUSO8rX74/QewamTest?node-id=0%3A1
 ```
 - Using Vuex for global state management   || Bonus.
 - Creating another button for dark mode  || Bonus. 
-- Using localstorge to set language and dark mode  || Bonus.
+- Using local storage to set language and dark mode  || Bonus.
 - You have English and Arabic fonts ready to use.
 - Using Grid to expand widget || Bonus.
 - Animations   || Bonus.
-- using extinal Lib for important uses is allowed.
+- using external Lib for important uses is allowed.
 
 # Api data 
 - Hints : you have to install //
-* "graphql": "^15.5.1"
-* "graphql-tag": "^2.11.0"
-* "vue-apollo": "^3.0.5"
-* "apollo-boost": "^0.4.9"
-* "@nuxtjs/apollo": "^4.0.1-rc.5"
-* "vue-cli-plugin-apollo": "^0.22.2"
+* “graphql”: “^15.5.1"
+* “graphql-tag”: “^2.11.0"
+* “vue-apollo”: “^3.0.5"
+* “apollo-boost”: “^0.4.9"
+* “@nuxtjs/apollo”: “^4.0.1-rc.5"
+* “vue-cli-plugin-apollo”: “^0.22.2"
 
 
 
-After downloaded this packkages you have to modify a config to work with this api_url = https://hoiu77uw.directus.app/graphql and auth token="Authorization":"bearer _4O10h_Xh1dgoiNQYj2QS4PoNbl7xuV9"
+After downloaded this packages you have to modify a config to work with this api_url = https://hoiu77uw.directus.app/graphql and auth token=“Authorization”:“bearer _4O10h_Xh1dgoiNQYj2QS4PoNbl7xuV9"
 
 you have to work with query :
 ```bash
@@ -97,6 +97,8 @@ https://hoiu77uw.directus.app/assets/${startup.logo.filename_disk}
 ￼![](/static/settings.png)
 
 Give us your app link and Github repo link :) .. 
+
+Note: You have one week period to achieve this Home Assignment. 
 
 
 # How we will test your project ?
