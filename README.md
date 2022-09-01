@@ -96,7 +96,7 @@ https://hoiu77uw.directus.app/assets/${startup.logo.filename_disk}
 
 ￼![](/static/settings.png)
 
-Give us your app link .. 
+Give us your app link and Github repo link :) .. 
 
 
 # How we will test your project ?
