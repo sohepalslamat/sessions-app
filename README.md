@@ -15,7 +15,6 @@ npm run dev
 ## Description:
 
 - We have a widget that shows in first section 7 days with dates and must to be always dynamic starting from today.
-- The days that have a Startup sessions will be active and clickable as a design and disabled and not allowed to click.
 - In the second section that is shown below, we will include startups that have sessions on the selected day.
 - When no startup sessions available you can show there is no sessions for this day as the design.
 - The start day to show is today, and the end day is 7 days after today.
