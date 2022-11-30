@@ -2,7 +2,7 @@
   <div>
     <div class="flex bg-base">
       <div class="min-h-fit w-[300px] rounded-[15px] bg-muted p-[20px]">
-        <!-- Start Heare -->
+        <!-- Start From Here -->
         {{ $t('Start-from-here') }}
       </div>
     </div>
@@ -15,7 +15,6 @@ export default {
   props: {},
   data() {
     return {
-      // create 5 companies objects for sessions array including company_name and company_logo and company_description and start_date and end_date and and zoom_link
       sessions: [
         {
           company_name: 'Baraka (YC S21)',

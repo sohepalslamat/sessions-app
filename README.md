@@ -1,5 +1,17 @@
 # Qewam Fronted developer job Test project
 
+## Project setup
+
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+
+```
+npm run dev
+```
+
 ## Description:
 
 - We have a widget that shows in first section 7 days with dates and must to be always dynamic starting from today.
@@ -8,6 +20,8 @@
 - When no startup sessions available you can show there is no sessions for this day as the design.
 - The start day to show is today, and the end day is 7 days after today.
 - Will have arrows next and previous to show hidden days ( you can use slider or you can do it as a custom js)
+- The widget will be responsive and will be shown in 3 columns in desktop and 2 columns in tablet and 1 column in mobile.
+- The widget will be shown in the center of the page.
 
 ## Acceptance Criteria:
 
@@ -47,6 +61,7 @@ https://www.figma.com/file/P4WoRMOeI8xW4IUSO8rX74/QewamTest?node-id=0%3A1
 - Using Grid to expand widget || Bonus.
 - Animations || Bonus.
 - using external Lib for important uses is allowed but wisely.
+- Using TailwindCss for styling.
 
 # Final Step :
 
@@ -57,9 +72,9 @@ https://www.figma.com/file/P4WoRMOeI8xW4IUSO8rX74/QewamTest?node-id=0%3A1
 
 ￼![](/static/settings.png)
 
-Give us your app link and Github repo link :) ..
+Send your netlify app link and Github repo to [hnasrallah@qewam.com](mailto:hnasrallah@qewam.com).
 
-Note: You have one week period to achieve this Home Assignment.
+Note: You have one week period to achieve this Home Assignment. If you have any questions, please feel free to contact me at [hnasrallah@qewam.com](mailto:hnasrallah@qewam.com).
 
 # How we are going to test your project ?
 
@@ -72,3 +87,5 @@ Note: You have one week period to achieve this Home Assignment.
 - Commits for Git.
 - Layout and design Acceptance criteria.
 - Bonus addressed points.
+
+## Good luck.
