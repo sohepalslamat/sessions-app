@@ -74,7 +74,12 @@ https://www.figma.com/file/P4WoRMOeI8xW4IUSO8rX74/QewamTest?node-id=0%3A1
 
 Send your netlify app link and Github repo to [hnasrallah@qewam.com](mailto:hnasrallah@qewam.com).
 
-Note: You have one week period to achieve this Home Assignment. If you have any questions, please feel free to contact me at [hnasrallah@qewam.com](mailto:hnasrallah@qewam.com).
+Notes:
+
+- You have one week period to achieve this Home Assignment.
+- Maybe we are going to ask you to do some changes or add some features.
+
+If you have any questions, please feel free to contact me at [hnasrallah@qewam.com](mailto:hnasrallah@qewam.com).
 
 # How we are going to test your project ?
 
