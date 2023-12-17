@@ -1,17 +1,15 @@
 <template>
   <div>
-    <div class="flex bg-base">
-      <div class="min-h-fit w-[300px] rounded-[15px] bg-muted p-[20px]">
-        <!-- Start From Here -->
-        {{ $t('Start-from-here') }}
-      </div>
+    <div class="flex bg-[#E9EAF2] p-[10px]">
+      <Card/>
     </div>
   </div>
 </template>
 
 <script>
+import Card from '~/components/sessions/Card'
 export default {
-  components: {},
+  components: {Card},
   props: {},
   data() {
     return {
