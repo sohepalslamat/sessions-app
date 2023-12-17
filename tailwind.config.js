@@ -84,6 +84,7 @@ module.exports = {
         '90px': '90px',
       },
       textColor: {
+        primary: 'var(--text-primary)',
         'base-color': 'var(--text-base)',
         inverted: 'var(--text-inverted)',
         muted: 'var(--text-muted)',
@@ -92,13 +93,13 @@ module.exports = {
         error: 'var(--text-error)',
       },
       backgroundColor: {
+        primary: 'var(--bg-primary)',
         base: 'var(--bg-base)',
         muted: 'var(--bg-muted)',
         muted2: 'var(--bg-muted2)',
         row: 'var(--bg-row)',
         active: 'var(--bg-active)',
         hover: 'var(--bg-hover)',
-        primary: 'var(--btn-primary)',
         secondary: 'var(--btn-secondary)',
         disabled: 'var(--bg-disabled)',
         inverted: 'var(--bg-inverted)',

@@ -60,7 +60,7 @@
   }
   :root {
     --primary: #9484F7;
-    --text-primary: #5B628A;
+    --text-primary: var(--primary);
     --text-base: #282C41;
     --text-inverted: #fff;
     --text-muted: #92929d;

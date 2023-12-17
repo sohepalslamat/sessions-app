@@ -12,12 +12,12 @@
     >
       <p class="text-base text-sm font-medium">{{ day.name }}</p>
       <span
-        class="h-[24px] rounded-[8px] bg-muted py-0 px-2 text-sm font-medium text-primary"
+        class="h-[24px] rounded-[8px] bg-muted py-0 px-2 text-sm font-medium text-[#5B628A]"
         >{{ day.number }}</span
       >
     </div>
     <div class="cursor-pointer" @click="increase">
-      <img :src="require('~/assets/images//chevron-right.png')" alt="plus" />
+      <img :src="require('~/assets/images/chevron-right.png')" alt="plus" />
     </div>
   </div>
 </template>
@@ -46,14 +46,14 @@ export default {
 </script>
 <style lang="scss">
 .active {
-  --border-muted: var(--primary);
+  border-color: var(--primary);
   border-width: 2px;
   p {
-    @apply text-primary;
+    color: var(--primary);
   }
   span {
     @apply text-inverted;
-    --bg-muted: var(--primary);
+    background-color: var(--primary);
   }
 }
 </style>
