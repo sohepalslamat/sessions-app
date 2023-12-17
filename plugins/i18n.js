@@ -17,7 +17,7 @@ export default ({ app }) => {
         code: 'en',
       },
     ],
-    fallbackLocale: 'ar', // always displays Chinese if English translation is not available
+    fallbackLocale: 'en', // always displays Chinese if English translation is not available
     silentFallbackWarn: true,
     lazy: true,
     seo: true,

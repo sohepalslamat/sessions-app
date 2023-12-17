@@ -59,19 +59,23 @@
     font-weight: 900;
   }
   :root {
-    --text-base: #000;
+    --primary: #9484F7;
+    --text-primary: #5B628A;
+    --text-base: #282C41;
     --text-inverted: #fff;
     --text-muted: #92929d;
     --text-active: #0a66d2;
     --text-disabled: #b4b4b4;
     --text-error: #e7404d;
 
-    --border-muted: #f1f1f5;
+    --border-primary: var(--primary);
+    --border-muted: #9297B729;
     --border-muted2: #92929d;
     --border-muted-btn: #e5e5e5;
     --border-primary: #0a66d2;
     --border-inverted: #000;
 
+    --bg-primary: var(--primary);
     --bg-base: #fff;
     --bg-muted: #f7f7f7;
     --bg-row: #f0f0f0;

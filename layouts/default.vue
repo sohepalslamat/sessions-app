@@ -2,7 +2,7 @@
   <div>
     <client-only>
       <div
-        class="justify container mx-auto flex flex-col items-center gap-[40px] pt-[100px]"
+        class="justify container mx-auto flex flex-col items-center gap-[40px] pt-[100px] bg-base"
       >
         <div
           class="mt-[50px] w-fit cursor-pointer rounded-[8px] bg-[#000] py-[6px] px-[11px] text-inverted hover:brightness-125"
@@ -24,7 +24,7 @@ export default {
   props: {},
   data() {
     return {
-      lang: 'ar',
+      lang: 'en',
     }
   },
   head: {},
