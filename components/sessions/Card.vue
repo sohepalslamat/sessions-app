@@ -13,7 +13,7 @@
         <img :src="require('~/assets/images/plus.png')" alt="plus" />
       </div>
     </div>
-    <Calendar class="p-2" />
+    <Calendar v-model="day" class="p-2" />
     <div
       v-for="(session, index) in sessions"
       :key="index"
@@ -50,6 +50,12 @@ export default {
   data() {
     return {
       selectedSession: null,
+      day: 25,
+    }
+  },
+  watch:{
+    day(val){
+      this.$emit('getDay',val)
     }
   },
   methods: {

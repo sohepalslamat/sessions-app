@@ -23,6 +23,16 @@
 </template>
 <script>
 export default {
+  model: {
+    prop: 'theDay',
+    event: 'update:theDay'
+  },
+  props: {
+    theDay:{
+      type: Number,
+      default: 25
+    }
+  },
   data() {
     return {
       days: [
@@ -30,7 +40,16 @@ export default {
         { name: 'Mon', number: 26 },
         { name: 'Tue', number: 27 },
       ],
-      selectedDay: 25
+    }
+  },
+  computed:{
+    selectedDay: {
+      get(){
+        return this.theDay
+      },
+      set(val){
+        this.$emit('update:theDay', val)
+      }
     }
   },
   methods: {
@@ -39,9 +58,8 @@ export default {
     },
     decrease(){
       this.selectedDay<= 25 ? this.selectedDay = 25 : this.selectedDay--
-
     }
-  },
+  }
 }
 </script>
 <style lang="scss">
