@@ -12,7 +12,7 @@
     >
       <p class="text-base text-sm font-medium">{{ day.name }}</p>
       <span
-        class="h-[24px] rounded-[8px] bg-muted py-0 px-2 text-sm font-medium text-[#5B628A]"
+        class="h-[24px] rounded-[8px] bg-muted py-0 px-2 text-sm font-medium text-muted"
         >{{ day.number }}</span
       >
     </div>
@@ -52,7 +52,7 @@ export default {
     color: var(--primary);
   }
   span {
-    @apply text-inverted;
+    color: #fff;
     background-color: var(--primary);
   }
 }
