@@ -11,7 +11,7 @@
 //   day: number
 //   sessions: Session[]
 // }
-export const fSessions = [
+export default [
   {
     day: 25,
     sessions: [

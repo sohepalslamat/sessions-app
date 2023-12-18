@@ -8,7 +8,7 @@
 
 <script>
 import Card from '~/components/sessions/Card'
-import { fSessions } from '~/components/sessions/fData'
+import fSessions from '~/components/sessions/fData.js'
 export default {
   components: { Card },
   props: {},
