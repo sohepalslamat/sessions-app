@@ -1,7 +1,6 @@
-
 <template>
   <div
-    class="min-h-fit w-[320px] bg-base px-[20px] py-[12px] border border-muted rounded-[12px] shadow-sm flex flex-col gap-[16px]"
+    class="flex min-h-fit w-[320px] flex-col gap-[16px] rounded-[12px] border border-muted bg-base px-[20px] py-[12px] shadow-sm"
   >
     <div class="flex items-center justify-between">
       <div>
@@ -11,15 +10,52 @@
         >
       </div>
       <div class="cursor-pointer">
-        <img :src="require('~/assets/images//plus.png')" alt="plus" />
+        <img :src="require('~/assets/images/plus.png')" alt="plus" />
       </div>
     </div>
     <Calendar class="p-2" />
+    <div
+      v-for="(session, index) in sessions"
+      :key="index"
+      @click="setSession(index)"
+    >
+      <Session :session="session" :is-active="selectedSession == index" />
+    </div>
+    <div
+      v-if="sessions.length <= 0"
+      class="flex flex-col items-center justify-center gap-[10px] rounded-[12px] border border-muted p-[10px] shadow-sm"
+    >
+      <div>
+        <IllustrationMusic />
+      </div>
+      <div class="w-[206px] text-center text-sm">
+        You have <b>no upcoming sessions</b> - start sharing a conversation with
+        a mentor.
+      </div>
+    </div>
   </div>
 </template>
 <script>
-import Calendar from './Calendar.vue';
+import Calendar from './Calendar.vue'
+import Session from './Session.vue'
+import IllustrationMusic from './IllustrationMusic.vue'
 export default {
-  components: {Calendar}
+  components: { Calendar, Session, IllustrationMusic },
+  props: {
+    sessions: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  data() {
+    return {
+      selectedSession: null,
+    }
+  },
+  methods: {
+    setSession(value) {
+      this.selectedSession = value
+    },
+  },
 }
 </script>
