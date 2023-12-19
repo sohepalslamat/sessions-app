@@ -7,26 +7,25 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Card from '~/components/sessions/Card'
-import fSessions from '~/components/sessions/fData.js'
 export default {
   components: { Card },
   props: {},
   data() {
     return {
-      sessions: this.filterDataByDay(25),
+
     }
   },
   head: {},
-  computed: {},
+  computed: {...mapGetters(['sessions'])},
   watch: {},
-  mounted() {},
+  created() {
+    this.$store.dispatch('fetchSessions', 25)
+  },
   methods: {
-    filterDataByDay(day) {
-      return fSessions.filter((i) => i.day === day)[0].sessions
-    },
     fetchData(day) {
-      this.sessions = this.filterDataByDay(day)
+      return this.$store.dispatch('fetchSessions', day)
     },
   },
 }
