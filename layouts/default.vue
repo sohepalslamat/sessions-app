@@ -1,8 +1,8 @@
 <template>
-  <div :class="{ dark: mode === 'dark' }">
+  <div :class="{ dark: mode === 'dark' }" class="bg-[#E9EAF2]">
     <client-only>
       <div
-        class="justify container mx-auto flex flex-col items-center gap-[40px] bg-[#E9EAF2] pt-[20px]"
+        class="justify container mx-auto flex flex-col items-center gap-[40px] pt-[20px]"
       >
         <div class="flex gap-2 text-center">
           <div
