@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-around gap-[10px]">
     <div class="cursor-pointer" @click="decrease">
-      <img :src="require('~/assets/images//chevron-left.png')" alt="plus" />
+      <img :src="require(`~/assets/images/chevron-${$i18n.locale == 'ar'?'right': 'left'}.png`)" alt="plus" />
     </div>
     <div
       v-for="day in days"
@@ -10,14 +10,14 @@
       class="flex h-[59px] w-[57px] flex-col items-center justify-center gap-[5px] rounded-[12px] border border-muted p-[8px] shadow-sm cursor-pointer"
       @click="selectedDay=day.number"
     >
-      <p class="text-base text-sm font-medium">{{ day.name }}</p>
+      <p class="text-base text-sm font-medium">{{ $t(day.name) }}</p>
       <span
         class="h-[24px] rounded-[8px] bg-muted py-0 px-2 text-sm font-medium text-muted"
         >{{ day.number }}</span
       >
     </div>
     <div class="cursor-pointer" @click="increase">
-      <img :src="require('~/assets/images/chevron-right.png')" alt="plus" />
+      <img :src="require(`~/assets/images/chevron-${$i18n.locale == 'ar'?'left': 'right'}.png`)" alt="plus" />
     </div>
   </div>
 </template>
@@ -36,9 +36,9 @@ export default {
   data() {
     return {
       days: [
-        { name: 'Today', number: 25 },
-        { name: 'Mon', number: 26 },
-        { name: 'Tue', number: 27 },
+        { name: 'today', number: 25 },
+        { name: 'mon', number: 26 },
+        { name: 'tue', number: 27 },
       ],
     }
   },

@@ -3,5 +3,11 @@
   "language": "English",
   "sar": "ريال",
   "point": "نقطة",
-  "Start-from-here": "ابدأ من هنا"
+  "Start-from-here": "ابدأ من هنا",
+  "upcoming-sessions": "الجلسات القادمة",
+  "dateTime": "السبت 25 يونيو 2022",
+  "today": "اليوم",
+  "mon": "الاثنين ",
+  "tue": "الثلاثاء",
+  "no-data-message": "ليس لديك <b>جلسات قادمة</b> - ابدأ بمشاركة محادثة مع موجه."
 }

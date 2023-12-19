@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="text-sm font-medium text-muted">
-      → {{ dateFormat(session.start_date) }} to
+      {{$i18n.locale == 'ar'?'←': '→'}} {{ dateFormat(session.start_date) }} to
       {{ dateFormat(session.end_date) }}
     </div>
     <div v-if="isActive" class="h-[1px] w-[151px] bg-[#5B628A14]"></div>
@@ -54,6 +54,7 @@ export default {
   },
   methods: {
     dateFormat(date) {
+      moment.locale(this.$i18n.locale === 'ar'? 'ar-ly': 'en');
       return moment(date).format('h:mm A')
     },
   },

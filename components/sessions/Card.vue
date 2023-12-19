@@ -1,12 +1,13 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div
     class="flex min-h-fit w-[320px] flex-col gap-[16px] rounded-[12px] border border-muted bg-base px-[20px] py-[12px] shadow-sm"
   >
     <div class="flex items-center justify-between">
       <div>
-        <p class="text-base text-base font-bold">Upcoming Sessions</p>
+        <p class="text-base text-base font-bold">{{ $t('upcoming-sessions') }}</p>
         <span class="text-base text-xs font-normal"
-          >Saturday, June 25, 2022</span
+          >{{ $t('dateTime') }}</span
         >
       </div>
       <div class="cursor-pointer">
@@ -28,10 +29,7 @@
       <div>
         <IllustrationMusic />
       </div>
-      <div class="w-[206px] text-center text-sm">
-        You have <b>no upcoming sessions</b> - start sharing a conversation with
-        a mentor.
-      </div>
+      <div class="w-[206px] text-center text-sm" v-html="$t('no-data-message')" />
     </div>
   </div>
 </template>
