@@ -5,6 +5,10 @@ export default {
   head: {
     title: 'Qx-Test',
     ssr: false,
+    target: 'static',
+    router: {
+      base: '/sessions-app/',
+    },
     htmlAttrs: {
       lang: 'en',
     },
