@@ -11,6 +11,7 @@
   "tue": "Tue",
   "join": "Join",
   "dismiss": "Dismiss",
-  "no-data-message": "You have <b>no upcoming sessions</b> - start sharing a conversation with a mentor."
-
+  "no-data-message": "You have <b>no upcoming sessions</b> - start sharing a conversation with a mentor.",
+  "dark": "Dark",
+  "light": "Light"
 }

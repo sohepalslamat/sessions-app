@@ -62,7 +62,7 @@ export default {
 </script>
 <style lang="scss">
 .active-card {
-  background-color: #e9eaf2;
+  background-color: var(--bg-active);
   border: none;
   cursor: default;
 }

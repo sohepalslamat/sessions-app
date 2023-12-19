@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'class',
   content: [],
 
   mode: 'jit',
@@ -85,7 +86,7 @@ module.exports = {
       },
       textColor: {
         primary: 'var(--text-primary)',
-        'base-color': 'var(--text-base)',
+        base: 'var(--text-base)',
         inverted: 'var(--text-inverted)',
         muted: 'var(--text-muted)',
         active: 'var(--text-active)',

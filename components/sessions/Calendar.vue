@@ -1,7 +1,8 @@
 <template>
   <div class="flex items-center justify-around gap-[10px]">
     <div class="cursor-pointer" @click="decrease">
-      <img :src="require(`~/assets/images/chevron-${$i18n.locale == 'ar'?'right': 'left'}.png`)" alt="plus" />
+      <ChevronRight v-if="$i18n.locale == 'ar'" />
+      <ChevronLeft v-else />
     </div>
     <div
       v-for="day in days"
@@ -17,12 +18,16 @@
       >
     </div>
     <div class="cursor-pointer" @click="increase">
-      <img :src="require(`~/assets/images/chevron-${$i18n.locale == 'ar'?'left': 'right'}.png`)" alt="plus" />
+      <ChevronLeft v-if="$i18n.locale == 'ar'" />
+      <ChevronRight v-else />
     </div>
   </div>
 </template>
 <script>
+import ChevronLeft from './icons/ChevronLeft.vue'
+import ChevronRight from './icons/ChevronRight.vue'
 export default {
+  components: { ChevronLeft, ChevronRight },
   model: {
     prop: 'theDay',
     event: 'update:theDay'
@@ -64,7 +69,8 @@ export default {
 </script>
 <style lang="scss">
 .active {
-  border-color: var(--primary);
+  border-color: var(--border-primary);
+  background-color: var(--bg-active);
   border-width: 2px;
   p {
     color: var(--primary);

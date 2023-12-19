@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex bg-[#E9EAF2] p-[10px]">
+    <div class="flex p-[10px]">
       <Card :sessions="sessions" @getDay="fetchData" />
     </div>
   </div>

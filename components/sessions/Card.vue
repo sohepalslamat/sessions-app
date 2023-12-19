@@ -5,13 +5,13 @@
   >
     <div class="flex items-center justify-between">
       <div>
-        <p class="text-base text-base font-bold">{{ $t('upcoming-sessions') }}</p>
+        <p class="text-base font-bold">{{ $t('upcoming-sessions') }}</p>
         <span class="text-base text-xs font-normal"
           >{{ $t('dateTime') }}</span
         >
       </div>
       <div class="cursor-pointer">
-        <img :src="require('~/assets/images/plus.png')" alt="plus" />
+        <Plus />
       </div>
     </div>
     <Calendar v-model="day" class="p-2" />
@@ -29,16 +29,17 @@
       <div>
         <IllustrationMusic />
       </div>
-      <div class="w-[206px] text-center text-sm" v-html="$t('no-data-message')" />
+      <div class="w-[206px] text-center text-sm text-base" v-html="$t('no-data-message')" />
     </div>
   </div>
 </template>
 <script>
 import Calendar from './Calendar.vue'
 import Session from './Session.vue'
-import IllustrationMusic from './IllustrationMusic.vue'
+import IllustrationMusic from './icons/IllustrationMusic.vue'
+import Plus from './icons/Plus.vue'
 export default {
-  components: { Calendar, Session, IllustrationMusic },
+  components: { Calendar, Session, IllustrationMusic, Plus },
   props: {
     sessions: {
       type: Array,
