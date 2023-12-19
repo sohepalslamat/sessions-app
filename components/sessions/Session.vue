@@ -25,12 +25,12 @@
         :href="session.zoom_link"
         target="_blank"
         class="rounded-[10px] bg-primary py-[12px] px-[16px] text-xs font-normal text-inverted hover:bg-hover"
-        >Join</a
+        >{{ $t('join') }}</a
       >
       <div
         class="bg-transparent cursor-pointer rounded-[10px] py-[12px] px-[16px] text-base text-xs font-normal hover:bg-[#f0f0f0]"
       >
-        Dismiss
+      {{ $t('dismiss') }}
       </div>
     </div>
   </div>

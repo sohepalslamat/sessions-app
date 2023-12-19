@@ -9,6 +9,8 @@
   "today": "Today",
   "mon": "Mon",
   "tue": "Tue",
+  "join": "Join",
+  "dismiss": "Dismiss",
   "no-data-message": "You have <b>no upcoming sessions</b> - start sharing a conversation with a mentor."
 
 }
