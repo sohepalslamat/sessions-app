@@ -18,7 +18,7 @@ export const mutations = {
 
 export const actions = {
   fetchSessions({ commit }, day) {
-    const sessions = fSessions.filter((i) => i.day === day)[0].sessions
+    const sessions = fSessions.filter((i) => i.day === day).length===0 ? [] : fSessions.filter((i) => i.day === day)[0].sessions
     commit('SET_SESSIONS', sessions)
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex p-[10px]">
-      <Card :sessions="sessions" @getDay="fetchData" />
+      <Card :sessions="sessions" />
     </div>
   </div>
 </template>
@@ -20,13 +20,5 @@ export default {
   head: {},
   computed: {...mapGetters(['sessions'])},
   watch: {},
-  created() {
-    this.$store.dispatch('fetchSessions', 25)
-  },
-  methods: {
-    fetchData(day) {
-      return this.$store.dispatch('fetchSessions', day)
-    },
-  },
 }
 </script>

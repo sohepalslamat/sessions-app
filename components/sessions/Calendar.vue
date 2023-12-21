@@ -7,11 +7,11 @@
     <div
       v-for="day in days"
       :key="day.number"
-      :class="{'active': selectedDay==day.number}"
-      class="flex h-[59px] w-[57px] flex-col items-center justify-center gap-[5px] rounded-[12px] border border-muted p-[8px] shadow-sm cursor-pointer"
-      @click="selectedDay=day.number"
+      :class="{ active: selectedDayId == day.id }"
+      class="flex h-[59px] w-[57px] cursor-pointer flex-col items-center justify-center gap-[5px] rounded-[12px] border border-muted p-[8px] shadow-sm"
+      @click="selectedDayId = day.id"
     >
-      <p class="text-base text-sm font-medium">{{ $t(day.name) }}</p>
+      <p class="text-base text-sm font-medium">{{ day.name }}</p>
       <span
         class="h-[24px] rounded-[8px] bg-muted py-0 px-2 text-sm font-medium text-muted"
         >{{ day.number }}</span
@@ -24,47 +24,58 @@
   </div>
 </template>
 <script>
+import moment from 'moment'
 import ChevronLeft from './icons/ChevronLeft.vue'
 import ChevronRight from './icons/ChevronRight.vue'
 export default {
   components: { ChevronLeft, ChevronRight },
-  model: {
-    prop: 'theDay',
-    event: 'update:theDay'
-  },
-  props: {
-    theDay:{
-      type: Number,
-      default: 25
-    }
-  },
   data() {
     return {
-      days: [
-        { name: 'today', number: 25 },
-        { name: 'mon', number: 26 },
-        { name: 'tue', number: 27 },
-      ],
+      days: [],
+      selectedDayId: null
     }
   },
-  computed:{
-    selectedDay: {
-      get(){
-        return this.theDay
-      },
-      set(val){
-        this.$emit('update:theDay', val)
-      }
+  watch:{
+    selectedDayId(val) {
+      const day = this.days.filter(i=> i.id === val)[0].number
+      this.$store.dispatch('fetchSessions', day)
     }
+  },
+  created() {
+    this.selectedDayId = 0
+    this.days = this.getThreeDays(this.selectedDayId)
   },
   methods: {
-    increase(){
-      this.selectedDay>= 27 ? this.selectedDay = 27 : this.selectedDay++
+    increase() {
+      if (this.selectedDayId === this.days[2].id) {
+        this.days = this.getThreeDays(this.days[2].id + 1)
+      }
+      this.selectedDayId++
     },
-    decrease(){
-      this.selectedDay<= 25 ? this.selectedDay = 25 : this.selectedDay--
-    }
-  }
+    decrease() {
+      if (this.selectedDayId === 0) {
+        this.selectedDayId = 0
+      } else {
+        if (this.selectedDayId === this.days[0].id) {
+          this.days = this.getThreeDays(this.days[0].id - 1)
+        }
+        this.selectedDayId--
+      }
+    },
+    getThreeDays(firstDayId) {
+      const days = []
+      for (let i = firstDayId; i < firstDayId + 3; i++) {
+        const currentDate = moment().add(i, 'days')
+        const day = {
+          id: i,
+          name: i === 0 ? 'today' : currentDate.format('ddd'),
+          number: currentDate.date(),
+        }
+        days.push(day)
+      }
+      return days
+    },
+  },
 }
 </script>
 <style lang="scss">

@@ -14,7 +14,7 @@
         <Plus />
       </div>
     </div>
-    <Calendar v-model="day" class="p-2" />
+    <Calendar class="p-2" />
     <div
       v-for="(session, index) in sessions"
       :key="index"
@@ -48,13 +48,7 @@ export default {
   },
   data() {
     return {
-      selectedSession: null,
-      day: 25,
-    }
-  },
-  watch:{
-    day(val){
-      this.$emit('getDay',val)
+      selectedSession: null
     }
   },
   methods: {

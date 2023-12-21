@@ -11,9 +11,10 @@
 //   day: number
 //   sessions: Session[]
 // }
+import moment from "moment"
 export default [
   {
-    day: 25,
+    day: +moment().format('DD'),
     sessions: [
       {
         company_name: 'Baraka (YC S21)',
