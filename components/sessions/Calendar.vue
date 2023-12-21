@@ -27,6 +27,7 @@
 import moment from 'moment'
 import ChevronLeft from './icons/ChevronLeft.vue'
 import ChevronRight from './icons/ChevronRight.vue'
+
 export default {
   components: { ChevronLeft, ChevronRight },
   data() {
@@ -39,6 +40,10 @@ export default {
     selectedDayId(val) {
       const day = this.days.filter(i=> i.id === val)[0].number
       this.$store.dispatch('fetchSessions', day)
+    },
+    '$i18n.locale'(val){
+      moment.locale(val === 'ar'? 'ar-ly': 'en');
+      this.days = this.getThreeDays(this.selectedDayId)
     }
   },
   created() {
@@ -68,7 +73,7 @@ export default {
         const currentDate = moment().add(i, 'days')
         const day = {
           id: i,
-          name: i === 0 ? 'today' : currentDate.format('ddd'),
+          name: i === 0 ? this.$t('today') : currentDate.format('ddd'),
           number: currentDate.date(),
         }
         days.push(day)
